@@ -6,7 +6,7 @@
 #
 # Do NOT ever include your *real* env in version control
 
-#MYSQL_DATABASE=dsproject
-#MYSQL_HOST=database-1.cdi2hcbskws9.us-east-1.rds.amazonaws.com
-#MYSQL_USER=msisadmin
-#MYSQL_PASSWORD=password
+MYSQL_DATABASE=dsproject
+MYSQL_HOST=database-1.cdi2hcbskws9.us-east-1.rds.amazonaws.com
+MYSQL_USER=msisadmin
+MYSQL_PASSWORD=password
