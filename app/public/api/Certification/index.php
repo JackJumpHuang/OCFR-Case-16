@@ -11,17 +11,17 @@ $vars = [];
 
 if (isset($_GET['Certificate_ID'])) {
   // This is an example of a parameterized query
-  $sql = 'SELECT * FROM Certificate WHERE Certificate_ID = ?';
+  $sql = 'SELECT * FROM Certification WHERE Certificate_ID = ?';
   $vars = [ $_GET['Certificate_ID'] ];
 }
 
 $stmt = $db->prepare($sql);
 $stmt->execute($vars);
 
-$certificates = $stmt->fetchAll();
+$certifications = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
-$json = json_encode($certificates, JSON_PRETTY_PRINT);
+$json = json_encode($certifications, JSON_PRETTY_PRINT);
 
 // Step 4: Output
 header('Content-Type: application/json');
