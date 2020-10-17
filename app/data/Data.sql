@@ -1,4 +1,4 @@
-USE dsproject;
+oUSE dsproject;
 
 create table Members(
       Member_ID INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -44,9 +44,7 @@ INSERT INTO Station (Station_Number) VALUES
 ("30");
 
 
-INSERT INTO Certification (Title, Agency, Expire_Date) VALUES
-("FireSystem", "Red Cross", "2022-09-01"),
-("FireStrategy", "Red Cross", "2023-12-15"),
-("Emergency Medical Responder", "Red Cross", "2022-01-31");
-
-
+INSERT INTO Certification (Certificate_ID, Title, Agency, Expire_Date) VALUES
+("1","FireSystem", "Red Cross", "2022-09-01"),
+("2", "FireStrategy", "Red Cross", "2023-12-15"),
+("3", "Emergency Medical Responder", "Red Cross", "2022-01-31");
