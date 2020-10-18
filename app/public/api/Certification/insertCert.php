@@ -24,7 +24,7 @@ $stmt = $db->prepare(
 );
 
 $stmt->execute([
-  $guid,
+  
   $_POST['Title'],
   $_POST['Agency'],
   $_POST['Expire_Date']
