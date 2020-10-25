@@ -5,13 +5,24 @@ var app = new Vue({
       Certificate_ID: "",
       Title: "",
       Agency: "",
-      Expire_Date: "",
+      Expire_Date: ""
     }],
     newCert:{
-    
+
       Title: "",
       Agency: "",
       Expire_Date: ""
+    },
+    activeCert: {
+      Certificate_ID: "",
+      Title: "",
+      Agency: "",
+      Expire_Date: ""
+    }
+  },
+  computed: {
+    activeCertName() {
+      return this.activeCert ? this.activeCert.Title
     }
   },
   methods: {
