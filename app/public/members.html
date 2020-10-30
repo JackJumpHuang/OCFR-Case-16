@@ -33,12 +33,14 @@
         </div>
       </div>
     </nav>
+      <!--
       <div class=row id="membersId">
         <div class="members" v-for="member in members">
           <span class="lastName">LastName: {{member.Last_Name}}</span>
         </div>
       </div>
-      <div>
+    -->
+      <div class=row id="membersId">
         <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -58,35 +60,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>John</td>
-              <td>Smith</td>
-              <td>6/19/1984</td>
-              <td>M</td>
-              <td>317-888-7777</td>
-              <td>123 Elm Ridge Street</td>
-              <td>John_Smith@OCFR.com></td>
-              <td>Captain</td>
-              <td>25</td>
-              <td>10/01/2001</td>
-              <td>Active</td>
-              <td>A-1</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jane</td>
-              <td>Sanders</td>
-              <td>7/18/1990</td>
-              <td>F</td>
-              <td>317-999-6666</td>
-              <td>875 Grant Street</td>
-              <td>Jane_Sanders@OCFR.com</td>
-              <td>Lieutenat</td>
-              <td>25</td>
-              <td>10/01/2001</td>
-              <td>Active</td>
-              <td>B-1</td>
+            <tr class="members" v-for="member in members">
+              <th scope="row">{{member.Member_ID}}</th>
+              <td>{{member.First_Name}}</td>
+              <td>{{member.Last_Name}}</td>
+              <td>{{member.Date_of_Birth}}</td>
+              <td>{{member.Gender}}</td>
+              <td>{{member.Phone}}</td>
+              <td>{{member.Address}}</td>
+              <td>{{member.Email}}</td>
+              <td>{{member.Position_Name}}</td>
+              <td>{{member.Station_Number}}</td>
+              <td>{{member.Start_Date}}</td>
+              <td>{{member.Member_Status}}</td>
+              <td>{{member.Radio_Number}}</td>
             </tr>
           </tbody>
         </table>

@@ -1,4 +1,4 @@
-oUSE dsproject;
+USE dsproject;
 
 create table Members(
       Member_ID INTEGER PRIMARY KEY AUTO_INCREMENT,

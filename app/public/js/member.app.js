@@ -12,6 +12,8 @@ var app = new Vue({
       Position_Name: "",
       Start_Date: "",
       Member_Status: "",
+      Phone:"",
+      Station_Number:"",
       Radio_Number: ""
     }]
   },
@@ -27,7 +29,7 @@ var app = new Vue({
 
   },
   created(){
-  
+
     this.fetchUser();
   }
 });
