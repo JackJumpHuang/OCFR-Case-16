@@ -27,7 +27,7 @@ var app = new Vue({
   },
   methods: {
     fetchUser(){
-      fetch("api/certification/")
+      fetch("api/Certification/")
       .then(response => response.json())
       .then(json => {
         this.certifications=json;
@@ -35,7 +35,7 @@ var app = new Vue({
       })
     },
     addCert ( evt ){
-      fetch("api/certification/insertCert.php",{
+      fetch("api/Certification/insertCert.php",{
         method:"POST",
         body: JSON.stringify(this.newCert),
         headers: {

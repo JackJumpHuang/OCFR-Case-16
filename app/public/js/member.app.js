@@ -14,7 +14,8 @@ var app = new Vue({
       Member_Status: "",
       Phone:"",
       Station_Number:"",
-      Radio_Number: ""
+      Radio_Number: "",
+      Certification:""
     }]
   },
   methods: {
