@@ -33,13 +33,7 @@
         </div>
       </div>
     </nav>
-      <!--
-      <div class=row id="membersId">
-        <div class="members" v-for="member in members">
-          <span class="lastName">LastName: {{member.Last_Name}}</span>
-        </div>
-      </div>
-    -->
+
       <div class=row id="membersId">
         <table class="table">
           <thead class="thead-dark">
@@ -62,7 +56,7 @@
           </thead>
           <tbody>
             <tr class="members" v-for="member in members">
-              <th scope="row">{{member.Member_ID}}</th>
+              <td>{{member.Member_ID}}</td>
               <td>{{member.First_Name}}</td>
               <td>{{member.Last_Name}}</td>
               <td>{{member.Date_of_Birth}}</td>

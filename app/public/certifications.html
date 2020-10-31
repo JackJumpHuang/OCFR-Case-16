@@ -16,7 +16,7 @@
   </head>
   <body>
 
-    <div class="container-fluid" id=certificateId>
+    <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
       <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,18 +35,18 @@
 
 
 
-    <div id="certificateId">
-    <table class="table" >
-      <thead>
+    <div class="row" id="certificateId">
+    <table class="table">
+      <thead class="thead-dark">
         <tr>
-          <td>Certificate_ID</td>
-          <td>Title</td>
-          <td>Agency</td>
-          <td>Expire_Date</td>
+          <th scope="col">Certificate_ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Agency</th>
+          <th scope="col">Expire_Date</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="certification in certifications" v-on:click="activeCert = certification; activeID = certification.Certificate_ID">
+        <tr v-for="certification in certifications" v-on:click="activeCert = certification">
           <td>{{certification.Certificate_ID}}</td>
           <td>{{certification.Title}}</td>
           <td>{{certification.Agency}}</td>
@@ -78,6 +78,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    </div>
     <!-- Footer referenced from https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
     <footer class="page-footer font-small special-color-dark pt-4">
 
@@ -89,6 +90,7 @@
 
     </footer>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
