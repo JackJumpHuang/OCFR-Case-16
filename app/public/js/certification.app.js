@@ -20,14 +20,9 @@ var app = new Vue({
       Expire_Date: ""
     }
   },
-  computed: {
-    activeCertName() {
-      return this.activeCert ? this.activeCert.Title
-    }
-  },
   methods: {
     fetchUser(){
-      fetch("api/Certification/")
+      fetch("api/certification/")
       .then(response => response.json())
       .then(json => {
         this.certifications=json;
@@ -35,7 +30,7 @@ var app = new Vue({
       })
     },
     addCert ( evt ){
-      fetch("api/Certification/insertCert.php",{
+      fetch("api/certification/insertCert.php",{
         method:"POST",
         body: JSON.stringify(this.newCert),
         headers: {
