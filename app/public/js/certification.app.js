@@ -19,11 +19,23 @@ var app = new Vue({
       Agency: "",
       Expire_Date: ""
     },
-    activeID: {
-      Certificate_ID: ""
-    }
-  },
+    activeID: []
+    },
   methods: {
+    updateCert( evt ){
+      fetch('api/certification/updateCert.php', {
+        method: 'POST',
+        body: JSON.stringify(this.activeCert),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => {
+        console.log("Returned from post:", json);
+      });
+
+    },
     fetchUser(){
       fetch("api/certification/")
       .then(response => response.json())
@@ -31,6 +43,7 @@ var app = new Vue({
         this.certifications=json;
         console.log(this.certifications);
       })
+
     },
     addCert ( evt ){
       fetch("api/certification/insertCert.php",{
@@ -58,13 +71,13 @@ var app = new Vue({
     },
     deleteCert(){
       console.log(this.activeID)
-      fetch('api/certification/deleteCert.php', {
+      fetch("api/certification/deleteCert.php", {
         method: 'POST',
         body: JSON.stringify(this.ActiveID),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
-      })
+      });
 
       console.log("Creating Posting...");
       console.log(this.activeID);
