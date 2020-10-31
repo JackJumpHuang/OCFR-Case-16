@@ -18,6 +18,9 @@ var app = new Vue({
       Title: "",
       Agency: "",
       Expire_Date: ""
+    },
+    activeID: {
+      Certificate_ID: ""
     }
   },
   methods: {
@@ -52,6 +55,20 @@ var app = new Vue({
         Agency: "",
         Expire_Date: ""
       }
+    },
+    deleteCert(){
+      console.log(this.activeID)
+      fetch('api/certification/deleteCert.php', {
+        method: 'POST',
+        body: JSON.stringify(this.ActiveID),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+
+      console.log("Creating Posting...");
+      console.log(this.activeID);
+
     }
 
   },

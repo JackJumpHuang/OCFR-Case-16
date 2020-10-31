@@ -46,7 +46,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="certification in certifications" v-on:click="activeCert = certification">
+        <tr v-for="certification in certifications" v-on:click="activeCert = certification; activeID = certification.Certificate_ID">
           <td>{{certification.Certificate_ID}}</td>
           <td>{{certification.Title}}</td>
           <td>{{certification.Agency}}</td>
@@ -55,7 +55,10 @@
       </tbody>
     </table>
   </div>
-
+    <form method="post" v-on:submit.prevent="deleteCert()">
+    <input class="form-control" v-model="activeCert.Title"id="Agency">
+    <button type="submit" class='btn btn-danger'>Delete</button>
+    </form>
     <form method="post" v-on:submit.prevent="addCert()">
       <div class="form-group">
         <label for="title">Title</label>
