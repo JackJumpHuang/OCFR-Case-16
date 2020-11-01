@@ -105,7 +105,7 @@ var app = new Vue({
           }
         });
 
-        console.log("Creating Posting...");
+        console.log("Deleting Posting...");
         console.log(this.activeID);
 
     },

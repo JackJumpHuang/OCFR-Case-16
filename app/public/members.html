@@ -55,7 +55,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="members" v-for="member in members" v-on:click="activemembers = member">
+            <tr class="members" v-for="member in members" v-on:click="activemembers = member; activeID.Member_ID = member.Member_ID">
               <td>{{member.Member_ID}}</td>
               <td>{{member.First_Name}}</td>
               <td>{{member.Last_Name}}</td>
