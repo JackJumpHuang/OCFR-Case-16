@@ -7,6 +7,12 @@ var app = new Vue({
       Agency: "",
       Expire_Date: ""
     }],
+    certMembers: [{
+      First_Name: "",
+      Last_Name: "",
+      Member_ID: "",
+      Certificate_ID: ""
+    }],
     newCert:{
 
       Title: "",
@@ -44,6 +50,14 @@ var app = new Vue({
         console.log(this.certifications);
       })
 
+    },
+    fetchCertMembers(){
+      fetch("api/certification/getMembers.php")
+      .then(response => response.json())
+      .then(json => {
+        this.certMembers=json;
+        console.log(this.certMembers);
+      })
     },
     addCert ( evt ){
       fetch("api/certification/insertCert.php",{
@@ -88,5 +102,6 @@ var app = new Vue({
   created(){
 
     this.fetchUser();
+    this.fetchCertMembers();
   }
 });
