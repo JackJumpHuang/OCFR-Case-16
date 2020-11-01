@@ -32,7 +32,23 @@ var app = new Vue({
       Station_Number:"",
       Radio_Number: "",
       Certification:""
-      }
+    },
+    activemembers:{
+      //Member_ID:"",
+      First_Name: "",
+      Last_Name: "",
+      Gender: "",
+      Date_of_Birth: "",
+      Email: "",
+      Address: "",
+      Position_Name: "",
+      Start_Date: "",
+      Member_Status: "",
+      Phone:"",
+      Station_Number:"",
+      Radio_Number: "",
+      Certification:""
+    }
   },
   methods: {
     fetchUser(){
@@ -80,6 +96,19 @@ var app = new Vue({
         Certification:""
       }
     },
+    updateMember(){
+      fetch('api/Members/updateMember.php', {
+        method: 'POST',
+        body: JSON.stringify(this.activemembers),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => {
+        console.log("Returned from post:", json);
+      });
+    }
 
   },
   created(){
