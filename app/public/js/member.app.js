@@ -18,7 +18,20 @@ var app = new Vue({
       Certification:""
     }],
     newmembers:{
-      
+      //Member_ID:"",
+      First_Name: "",
+      Last_Name: "",
+      Gender: "",
+      Date_of_Birth: "",
+      Email: "",
+      Address: "",
+      Position_Name: "",
+      Start_Date: "",
+      Member_Status: "",
+      Phone:"",
+      Station_Number:"",
+      Radio_Number: "",
+      Certification:""
       }
   },
   methods: {
@@ -51,6 +64,7 @@ var app = new Vue({
 
     newmembersData() {
       return{
+        //Member_ID:'',
         First_Name: "",
         Last_Name: "",
         Gender: "",

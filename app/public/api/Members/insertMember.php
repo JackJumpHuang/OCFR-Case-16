@@ -19,8 +19,7 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 // Note the use of parameterized statements to avoid injection
 $stmt = $db->prepare(
-  'INSERT INTO Members (First_Name, Last_Name, Gender, Date_of_Birth, Email, Address,
-    Position_Name, Start_Date, Member_Status, Phone, Station_Number, Radio_Number, Certification)
+  'INSERT INTO Members (First_Name, Last_Name, Gender, Date_of_Birth, Email, Address,Position_Name, Start_Date, Member_Status, Phone, Station_Number, Radio_Number, Certification)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
 );
 
