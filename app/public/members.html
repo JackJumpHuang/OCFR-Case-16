@@ -34,7 +34,7 @@
       </div>
     </nav>
 
-      <div class=row id="membersId">
+      <div class="container-fluid" id="membersId">
         <table class="table">
           <thead class="thead-dark">
             <tr>
@@ -55,7 +55,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="members" v-for="member in members">
+            <tr class="members" v-for="member in members" v-on:click="activemembers = member">
               <td>{{member.Member_ID}}</td>
               <td>{{member.First_Name}}</td>
               <td>{{member.Last_Name}}</td>
@@ -142,7 +142,7 @@
           <input class="form-control" v-model="activemembers.Certification" id="certi">
           </div>
 
-          <button type="submit" class='btn btn-danger' v-on:click.prevent="deleteCert()">Delete Member</button>
+          <button type="submit" class='btn btn-danger' v-on:click.prevent="deleteMember()">Delete Member</button>
           <button type="submit" class='btn btn-warning' v-on:click.prevent="updateMember()">Update Member</button>
         </form>
 

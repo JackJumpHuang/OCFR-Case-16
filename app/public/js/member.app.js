@@ -34,7 +34,7 @@ var app = new Vue({
       Certification:""
     },
     activemembers:{
-      //Member_ID:"",
+      Member_ID:"",
       First_Name: "",
       Last_Name: "",
       Gender: "",
@@ -48,9 +48,26 @@ var app = new Vue({
       Station_Number:"",
       Radio_Number: "",
       Certification:""
+    },
+    activeID: {
+      Member_ID:""
     }
   },
   methods: {
+    updateMember( evt ){
+      fetch('api/Members/updateMember.php', {
+        method: 'POST',
+        body: JSON.stringify(this.activemembers),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => {
+        console.log("Returned from post:", json);
+      });
+    },
+
     fetchUser(){
       fetch("api/Members/")
       .then(response => response.json())
@@ -78,6 +95,21 @@ var app = new Vue({
         this.newmembers = this.newmembersData();
     },
 
+    deleteMember(){
+        console.log(this.activeID)
+        fetch("api/Members/deleteMember.php", {
+          method: 'POST',
+          body: JSON.stringify(this.activeID),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        });
+
+        console.log("Creating Posting...");
+        console.log(this.activeID);
+
+    },
+
     newmembersData() {
       return{
         //Member_ID:'',
@@ -95,20 +127,8 @@ var app = new Vue({
         Radio_Number: "",
         Certification:""
       }
-    },
-    updateMember(){
-      fetch('api/Members/updateMember.php', {
-        method: 'POST',
-        body: JSON.stringify(this.activemembers),
-        headers: {
-          "Content-Type": "application/json; charset=utf-8"
-        }
-      })
-      .then( response => response.json() )
-      .then( json => {
-        console.log("Returned from post:", json);
-      });
     }
+
 
   },
   created(){

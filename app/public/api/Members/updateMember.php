@@ -6,7 +6,7 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 $stmt = $db->prepare(
-  'UPDATE Certification SET First_Name=?, Last_Name=?, Gender=?, Date_of_Birth=?, Email=?, Address=?,Position_Name=?, Start_Date=?, Member_Status=?, Phone=?, Station_Number=?, Radio_Number=?, Certification=?
+  'UPDATE Members SET First_Name=?, Last_Name=?, Gender=?, Date_of_Birth=?, Email=?, Address=?,Position_Name=?, Start_Date=?, Member_Status=?, Phone=?, Station_Number=?, Radio_Number=?, Certification=?
    WHERE Member_ID = ?;'
 );
 
