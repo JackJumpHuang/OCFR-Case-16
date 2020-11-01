@@ -73,8 +73,78 @@
             </tr>
           </tbody>
         </table>
-      </div>
 
+
+      <form method="post" v-on:submit.prevent="addUser()">
+        <h2>Submit a new member</h2>
+          <div class="form-group">
+            <label for="FirstName">First Name</label>
+            <input class="form-control" v-model="newmembers.First_Name">
+          </div>
+
+          <div class="form-group">
+            <label for="LastName">Last Name</label>
+            <input class="form-control" v-model="newmembers.Last_Name">
+          </div>
+
+          <div class="form-group">
+            <label for="Gender">Gender</label>
+            <input class="form-control" v-model="newmembers.Gender">
+          </div>
+
+          <div class="form-group">
+            <label for="Date_of_Birth">Date of Birth</label>
+            <input class="form-control" v-model="newmembers.Date_of_Birth"id="Date_of_Birth">
+          </div>
+
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input class="form-control" v-model="newmembers.Email"id="Email">
+          </div>
+
+          <div class="form-group">
+            <label for="Address">Address</label>
+            <input class="form-control" v-model="newmembers.Address"id="Address">
+          </div>
+
+          <div class="form-group">
+            <label for="Position_Name">Position Name</label>
+            <input class="form-control" v-model="newmembers.Position_Name"id="Position_Name">
+          </div>
+
+          <div class="form-group">
+            <label for="Start_Date">Start Date</label>
+            <input class="form-control" v-model="newmembers.Start_Date"id="Start_Date">
+          </div>
+
+          <div class="form-group">
+            <label for="Member_Status">Member Status</label>
+            <input class="form-control" v-model="newmembers.Member_Status"id="Member_Status">
+          </div>
+
+          <div class="form-group">
+            <label for="Phone">Phone</label>
+            <input class="form-control" v-model="newmembers.Phone"id="Phone">
+          </div>
+
+          <div class="form-group">
+            <label for="Station_Number">Station Number</label>
+            <input class="form-control" v-model="newmembers.Station_Number"id="Station_Number">
+          </div>
+
+          <div class="form-group">
+            <label for="Radio_Number">Radio Number</label>
+            <input class="form-control" v-model="newmembers.Radio_Number"id="Radio_Number">
+          </div>
+
+          <div class="form-group">
+            <label for="Certification">Certification</label>
+            <input class="form-control" v-model="newmembers.Certification"id="Certification">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
 
 
     <!-- Footer referenced from https://mdbootstrap.com/docs/jquery/navigation/footer/ -->
