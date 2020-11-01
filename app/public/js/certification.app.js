@@ -25,7 +25,9 @@ var app = new Vue({
       Agency: "",
       Expire_Date: ""
     },
-    activeID: []
+    activeID: {
+      Certificate_ID:""
+    }
     },
   methods: {
     updateCert( evt ){
@@ -87,7 +89,7 @@ var app = new Vue({
       console.log(this.activeID)
       fetch("api/certification/deleteCert.php", {
         method: 'POST',
-        body: JSON.stringify(this.ActiveID),
+        body: JSON.stringify(this.activeID),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }

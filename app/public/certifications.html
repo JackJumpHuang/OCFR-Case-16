@@ -46,7 +46,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="certification in certifications" v-on:click="activeCert = certification">
+        <tr v-for="certification in certifications" v-on:click="activeCert = certification; activeID.Certificate_ID = certification.Certificate_ID">
           <td>{{certification.Certificate_ID}}</td>
           <td>{{certification.Title}}</td>
           <td>{{certification.Agency}}</td>
