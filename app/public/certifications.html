@@ -70,9 +70,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="certMember in certMembers">
+        <tr v-for="certMember in certMembers" v-if= "certMember.Certificate_ID == activeID.Certificate_ID">
+
           <td>{{certMember.First_Name}}</td>
           <td>{{certMember.Last_Name}}</td>
+
         </tr>
       </tbody>
     </table>
