@@ -48,3 +48,10 @@ INSERT INTO Certification (Certificate_ID, Title, Agency, Expire_Date) VALUES
 ("1","FireSystem", "Red Cross", "2022-09-01"),
 ("2", "FireStrategy", "Red Cross", "2023-12-15"),
 ("3", "Emergency Medical Responder", "Red Cross", "2022-01-31");
+
+USE dsproject;
+ALTER TABLE Members
+ADD Phone varchar(30),
+ADD Station_Number Int(11),
+ADD Certification varchar(50);
+
