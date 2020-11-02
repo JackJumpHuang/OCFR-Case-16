@@ -2,6 +2,7 @@ var app = new Vue({
   el:"#Expired",
   data:{
     lists:[{
+      Association_ID:"",
       First_Name:"",
       Last_Name:"",
       Member_ID:"",
@@ -12,7 +13,7 @@ var app = new Vue({
   },
   methods:{
     fetchExpiredlist(){
-      fetch("api/report1/expiredlist.php")
+      fetch("api/report1/")
       .then(response => response.json())
       .then(json => {
         this.lists=json;

@@ -2,12 +2,12 @@
 
 require 'common.php';
 
-// Step 1: Get a datase connection from our helper class
+// Step 1: Get a datase connection from our helper class  WHERE (CONVERT(varchar(10),Expire_Date,102) - CONVERT(varchar(10),GETDATE(),102)) < 0 ';
 $db = DbConnection::getConnection();
 
 $sql = 'SELECT *
-        FROM Association
-        WHERE (CONVERT(varchar(10),Expire_Date,102) - CONVERT(varchar(10),GETDATE(),102)) < 0 ';
+        FROM Association';
+
 $vars = [];
 
 if (isset($_GET['Association_ID'])) {
