@@ -47,19 +47,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>A-1</td>
-                <td>John Smith</td>
-                <td>John_Smith@OCFR.com</td>
-              </tr>
-              <tr>
-                <td>B-1</td>
-                <td>Jane Sanders</td>
-                <td>Jane_Sanders@OCFR.com</td>
+              <tr class="members" v-for"member in members">
+                <td>{{members.Radio_Number}}</td>
+                <td>{{members.First_Name}}</td>
+                <td>{{members.Email}}</td>
               </tr>
             </tbody>
           </table>
       </div>
+
 
       <div>
         <h2>Station Number</h2>
