@@ -58,3 +58,15 @@ ADD Certification varchar(50);
 USE dsproject;
 Insert into Members(Phone, Station_Number, Certification) Values
 ("317-589-7856", 26, "FireSystem");
+
+USE dsproject;
+
+Create table Association(
+     Association_ID INT PRIMARY KEY AUTO_INCREMENT,
+     First_Name varchar (50),
+     Last_Name Varchar(20),
+     Certification varchar (50),
+     Expire_Date varchar(20),
+     Member_ID int,
+     Foreign key (Member_ID) references Members(Member_ID)
+);
