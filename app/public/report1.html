@@ -36,6 +36,12 @@
 
     <div id="Expired">
       <h2>This table shows expired certification list</h2>
+
+      <select v-model="choose.certification">
+        <option value="">All</option>
+        <option v-for="list in lists">{{list.Certification}}</option>
+      </select>
+
         <table class="table">
             <thead class="thead-dark">
               <tr>
@@ -48,7 +54,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="list in lists">
+              <tr v-for="list in lists" v-if="choose.certification==''|| choose.certification ==list.Certification">
                 <td scope="row">{{list.Member_ID}}</td>
                 <td>{{list.First_Name}}</td>
                 <td>{{list.Last_Name}}</td>

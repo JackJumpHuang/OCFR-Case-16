@@ -9,7 +9,10 @@ var app = new Vue({
       Certification:"",
       Certificate_ID:"",
       Expire_Date:""
-    }]
+    }],
+    choose:{
+      certification:''
+    }
   },
   methods:{
     fetchUser(){
@@ -24,5 +27,6 @@ var app = new Vue({
   },
   created(){
     this.fetchUser();
+
   }
 });
