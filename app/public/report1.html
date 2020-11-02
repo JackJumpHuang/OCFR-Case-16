@@ -34,7 +34,8 @@
       </div>
     </nav>
 
-    <div>
+    <div id="Expired">
+      <h2>This table shows expired certification list</h2>
         <table class="table">
             <thead class="thead-dark">
               <tr>
@@ -42,30 +43,18 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>
                 <th scope="col">Expired Certification</th>
+                <th scope="col">Certification ID</th>
                 <th scope="col">Expired Date</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>John</td>
-                <td>Smith</td>
-                <td>CPR</td>
-                <td>2019-10-31</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>John</td>
-                <td>Smith</td>
-                <td>Fitness</td>
-                <td>2020-06-17</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jane</td>
-                <td>Sanders</td>
-                <td>Fitness</td>
-                <td>2019-08-26</td>
+              <tr v-for="list in lists">
+                <td scope="row">{{list.Member_ID}}</td>
+                <td>{{list.First_Name}}</td>
+                <td>{{list.Last_Name}}</td>
+                <td>{{list.Certification}}</td>
+                <td>{{list.Certificate_ID}}</td>
+                <td>{{list.Expire_Date}}</td>
               </tr>
             </tbody>
           </table>
