@@ -70,3 +70,10 @@ Create table Association(
      Member_ID int,
      Foreign key (Member_ID) references Members(Member_ID)
 );
+
+USE dsproject;
+INSERT INTO Association (First_Name, Last_Name, Certification, Expire_Date) VALUES
+("Cristiano", "Ronaldo", "FireSystem", "2022-09-01" ),
+("Cristiano", "Ronaldo", "FireStrategy", "2023-12-15"),
+("Lionel", "Messi", "Emergency Medical Responder", "2022-01-31"),
+("Cristiano", "Ronaldo", "Emergency Medical Responder", "2022-01-31");
