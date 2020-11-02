@@ -7,7 +7,7 @@ $db = DbConnection::getConnection();
 
 $sql = 'SELECT *
         FROM Association
-        WHERE (CONVERT(varchar(10),Expire_Date,102) - CONVERT(varchar(10),GETDATE(),102)) < 0 ';
+        ';
 
 $vars = [];
 

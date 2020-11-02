@@ -12,7 +12,7 @@ var app = new Vue({
     }]
   },
   methods:{
-    fetchExpiredlist(){
+    fetchUser(){
       fetch("api/report1/")
       .then(response => response.json())
       .then(json => {
@@ -23,6 +23,6 @@ var app = new Vue({
 
   },
   created(){
-    this.fetchExpiredlist();
+    this.fetchUser();
   }
 });
