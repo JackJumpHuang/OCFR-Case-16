@@ -55,3 +55,6 @@ ADD Phone varchar(30),
 ADD Station_Number Int(11),
 ADD Certification varchar(50);
 
+USE dsproject;
+Insert into Members(Phone, Station_Number, Certification) Values
+("317-589-7856", 26, "FireSystem");
