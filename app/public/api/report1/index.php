@@ -6,8 +6,8 @@ require 'common.php';
 $db = DbConnection::getConnection();
 
 $sql = 'SELECT *
-        FROM Association
-        where (Expire_Date-curdate()) > 0 ';
+        FROM Association,Certification
+        where (Certification.Expire_Date-curdate()) < 0 ';
 
 $vars = [];
 
