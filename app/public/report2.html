@@ -47,10 +47,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="members" v-for"member in members">
-                <td>{{members.Radio_Number}}</td>
-                <td>{{members.First_Name}}</td>
-                <td>{{members.Email}}</td>
+              <tr class="members" v-for:"member in members">
+                <td>{{member.Radio_Number}}</td>
+                <td>{{member.First_Name}}</td>
+                <td>{{member.Email}}</td>
               </tr>
             </tbody>
           </table>
@@ -62,7 +62,7 @@
       </div>
       <div>
           <table class="table">
-              <thead class="thead-dark">
+              <thead class="thead-dark" v-for:"member in members">
                 <tr>
                   <th scope="col">Station Number</th>
                   <th scope="col">Name</th>
@@ -70,10 +70,10 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>{{members.Station_Number}}</td>
-                  <td>{{members.First_Name}}</td>
-                  <td>{{members.Email}}</td>
+                <tr class="members" v-for>
+                  <td>{{member.Station_Number}}</td>
+                  <td>{{member.First_Name}}</td>
+                  <td>{{member.Email}}</td>
                 </tr>
               </tbody>
             </table>
