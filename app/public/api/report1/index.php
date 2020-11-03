@@ -7,8 +7,7 @@ $db = DbConnection::getConnection();
 
 $sql = 'SELECT *
         FROM Association
-        where (Expire_Date-GETDATE())<0
-        ';
+        where (Expire_Date-curdate()) > 0 ';
 
 $vars = [];
 
